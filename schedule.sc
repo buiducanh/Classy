@@ -1,6 +1,7 @@
 course COMM271 4
 Mo We 2:30PM 3:45PM
 
+# Use # to start a comment
 #course COMM-DIS210 4
 #Tu Th 4:00PM 5:15PM
 #Mo 12:20PM 1:10PM

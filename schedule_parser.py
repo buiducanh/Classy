@@ -27,7 +27,8 @@ def parse_schedule(input):
         if course[0].lower() == 'course':
             courses.append([])
             courseInfo.append(" ".join(course[1:]))
-            credits += int(course[-1])
+            if course[-1].isdigit():
+                credits += int(course[-1])
         else:
             days = [i.strip()[:2].lower() for i in course[:-2]]
             start, end = map(parse_time, course[-2:])
