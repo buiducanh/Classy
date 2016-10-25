@@ -39,7 +39,16 @@ def parse_schedule(input):
     return (courses, courseInfo)
 
 from Classy import resolveClassSchedule
-input = open('schedule.sc', 'r')
+import argparse
+
+# defines program's arguments.
+parser = argparse.ArgumentParser(description='Resolves your class schedule.')
+parser.add_argument('input', type=argparse.FileType('r'))
+
+# parses command line arguments.
+args = parser.parse_args()
+
+input = args.input
 courses, courseInfo = parse_schedule(input)
 print("credits {}".format(courseInfo[-1]))
 print(resolveClassSchedule(courses, courseInfo))
